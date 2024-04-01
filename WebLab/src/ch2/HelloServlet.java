@@ -30,15 +30,8 @@ public class HelloServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("EUC-KR");
         response.setContentType("text/html;charset=EUC-KR");
-        PrintWriter out = response.getWriter();
-        out.print("<html>");
-        out.print("<head>");
-        out.print("<title>helloworld servlet</title>");
-        out.print("</head>");
-        out.print("<body>");
-        out.print("<h1>HelloWorld</h1>");
-        out.print("</body>");
-        out.print("</html>");
+        PrintWriter out = response.getWriter();		
+		out.print("<h1>HelloWorld</h1>");
 	}
 
 	/**
