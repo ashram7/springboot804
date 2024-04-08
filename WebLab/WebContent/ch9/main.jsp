@@ -1,16 +1,16 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
-<%-- ¼±¾ð¹® ÁÖ¼® : ÆäÀÌÁö Áö½Ã ÅÂ±× --%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%-- ì„ ì–¸ë¬¸ ì£¼ì„ : íŽ˜ì´ì§€ ì§€ì‹œ íƒœê·¸ --%>
 <%@ page import="java.util.Date" %>
 <%@ page session="false" %>
 <%!
-/** ¼±¾ðºÎ(¸â¹öº¯¼ö ¼±¾ð) ¾È¿¡¼­ÀÇ ÁÖ¼® */
+/** ì„ ì–¸ë¶€(ë©¤ë²„ë³€ìˆ˜ ì„ ì–¸) ì•ˆì—ì„œì˜ ì£¼ì„ */
 	Date date;
 	String name;
 	String email;
 %>
 <%! 
-/** ¼±¾ðºÎ(¸â¹ö ¸Þ¼­µå : ÇÔ¼ö ¼±¾ð) ¾È¿¡¼­ÀÇ ÁÖ¼® */
+/** ì„ ì–¸ë¶€(ë©¤ë²„ ë©”ì„œë“œ : í•¨ìˆ˜ ì„ ì–¸) ì•ˆì—ì„œì˜ ì£¼ì„ */
     public int getLength(){
         int len = email.length();
         return len;
@@ -23,22 +23,22 @@
 <title>Insert title here</title>
 </head>
 <body>
-    <h1>½ºÅ©¸³Æ® ÅÂ±× Å×½ºÆ®</h1>
+    <h1>ìŠ¤í¬ë¦½íŠ¸ íƒœê·¸ í…ŒìŠ¤íŠ¸</h1>
     <%
-        /* ½ºÅ©¸³Æ® ÅÂ±× ¾È¿¡¼­ÀÇ ¿©·¯ÁÙ ÁÖ¼®  */
+        /* ìŠ¤í¬ë¦½íŠ¸ íƒœê·¸ ì•ˆì—ì„œì˜ ì—¬ëŸ¬ì¤„ ì£¼ì„  */
         date = new Date();
     %>
-    <%-- JSP ÁÖ¼® : ÆÛ¼¾Æ® ÀÌÄ÷Àº Ãâ·Â¹® --%>
-   	ÇöÀç ³¯Â¥ : <%=date.toLocaleString() /* ÁÖ¼®  */%>
+    <%-- JSP ì£¼ì„ : í¼ì„¼íŠ¸ ì´í€„ì€ ì¶œë ¥ë¬¸ --%>
+   	í˜„ìž¬ ë‚ ì§œ : <%=date.toLocaleString() /* ì£¼ì„  */%>
    	<br />
    	<%@ include file="head.jsp" %>
     <%
-        name = request.getParameter("name"); // ½ºÅ©¸³Æ® ÅÂ±× ¾È¿¡¼­ÀÇ ÇÑ ÁÙ ÁÖ¼®
+        name = request.getParameter("name"); // ìŠ¤í¬ë¦½íŠ¸ íƒœê·¸ ì•ˆì—ì„œì˜ í•œ ì¤„ ì£¼ì„
         email = request.getParameter("email");
     %>
     name : <%=name %><br />
     email : <%=email %><br />
-    <%=date.getDate() %>ÀÏ ÀÔ´Ï´Ù. ÀÌ¸ÞÀÏÀÇ ±æÀÌ´Â <%=getLength() %>ÀÔ´Ï´Ù.    	
+    <%=date.getDate() %>ì¼ ìž…ë‹ˆë‹¤. ì´ë©”ì¼ì˜ ê¸¸ì´ëŠ” <%=getLength() %>ìž…ë‹ˆë‹¤.    	
 </body>
 </html>
 
