@@ -3,6 +3,8 @@ package controller;
 import java.util.HashMap;
 import java.util.Map;
 
+import controller.board.GetBoardListController;
+import controller.board.InsertBoardController;
 import controller.user.InsertUserController;
 import controller.user.LoginController;
 import controller.user.LogoutController;
@@ -15,7 +17,10 @@ public class HandlerMapping {
 		mappings.put("/insertUser.do", new InsertUserController());
 		
         mappings.put("/login.do", new LoginController());
-        mappings.put("/logout.do", new LogoutController());		
+        mappings.put("/logout.do", new LogoutController());	
+        
+        mappings.put("/insertBoard.do", new InsertBoardController());
+        mappings.put("/getBoardList.do", new GetBoardListController());        
 		
 	}
 	
